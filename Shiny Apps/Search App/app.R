@@ -51,9 +51,7 @@ server<- function(input, output, session){
     canddf<- canddf%>%
       dplyr::mutate(full_name = paste(first_name, last_name))
     names<- canddf$full_name
-    View(canddf)
-    
-    View(names)
+        
     updateSelectInput(session = session, inputId = "nameselect", choices = names)
   })
 
